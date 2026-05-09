@@ -26,14 +26,7 @@
     margin-bottom:20px;
 }
 
-.fake-chart{
-    height:250px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    border-radius:12px;
-    background:white;
-}
+
 
 .fake-chart h1{
     color:#999;
@@ -79,9 +72,8 @@
 }
 
 .diagnostic-list{
-    background:white;
-    border-radius:20px;
-    padding:20px;
+    max-height:400px;
+    overflow-y:auto;
 }
 
 .diagnostic-list h2{
@@ -89,8 +81,7 @@
 }
 
 table{
-    width:100%;
-    border-collapse:collapse;
+    min-width:700px;
 }
 
 thead{
@@ -107,4 +98,17 @@ td{
     padding:16px 14px;
     border-bottom:1px solid #eee;
     font-size:14px;
+}
+.chart-placeholder{
+    background:#f4f0fe;
+    border-radius:20px;
+    padding:20px;
+    overflow:hidden;
+}
+tbody tr:hover{
+    background:#f9fafb;
+}
+
+.table-wrapper{
+    overflow-x:auto;
 }

@@ -2,7 +2,7 @@
     background:white;
     border-radius:20px;
     padding:20px;
-    height:calc(100vh - 140px);
+    height:calc(100vh - 120px);
     overflow:hidden;
 }
 
@@ -84,4 +84,8 @@
 .more-icon{
     color:#666;
     cursor:pointer;
+}
+
+.patient-card{
+    transition:0.3s ease;
 }

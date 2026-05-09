@@ -1,6 +1,8 @@
 import "./Dashboard.css";
+import BloodPressureChart from "../BloodPressureChart/BloodPressureChart";
 
-function Dashboard() {
+function Dashboard({patient}) {
+    const latestDiagnosis = patient.diagnosis_history[0];
   return (
     <div className="dashboard">
       {/* Diagnosis History */}
@@ -15,9 +17,7 @@ function Dashboard() {
             <p>Last 6 months</p>
           </div>
 
-          <div className="fake-chart">
-            <h1>Chart Coming Soon</h1>
-          </div>
+          <BloodPressureChart diagnosisHistory={patient.diagnosis_history} />
         </div>
 
         {/* Vital Cards */}
@@ -25,25 +25,25 @@ function Dashboard() {
           <div className="vital-card respiratory">
             <h4>Respiratory Rate</h4>
 
-            <h2>20 bpm</h2>
+            <h2>{latestDiagnosis.respiratory_rate.value}</h2>
 
-            <p>Normal</p>
+            <p>{latestDiagnosis.respiratory_rate.levels}</p>
           </div>
 
           <div className="vital-card temperature">
             <h4>Temperature</h4>
 
-            <h2>98.6°F</h2>
+            <h2>{latestDiagnosis.temperature.value}°F</h2>
 
-            <p>Normal</p>
+            <p>{latestDiagnosis.temperature.levels}</p>
           </div>
 
           <div className="vital-card heart">
             <h4>Heart Rate</h4>
 
-            <h2>78 bpm</h2>
+            <h2>{latestDiagnosis.heart_rate.value}bpm</h2>
 
-            <p>Lower than Average</p>
+            <p>{latestDiagnosis.heart_rate.levels}</p>
           </div>
         </div>
       </div>
@@ -52,7 +52,8 @@ function Dashboard() {
       <div className="diagnostic-list">
         <h2>Diagnostic List</h2>
 
-        <table>
+    <div className="table-wrapper">
+ <table>
           <thead>
             <tr>
               <th>Problem/Diagnosis</th>
@@ -62,25 +63,20 @@ function Dashboard() {
           </thead>
 
           <tbody>
-            <tr>
-              <td>Hypertension</td>
-              <td>High blood pressure</td>
-              <td>Under Observation</td>
-            </tr>
+            {patient.diagnostic_list.map((item, index) => (
+              <tr key={index}>
+                <td>{item.name}</td>
 
-            <tr>
-              <td>Type 2 Diabetes</td>
-              <td>Insulin resistance</td>
-              <td>Cured</td>
-            </tr>
+                <td>{item.description}</td>
 
-            <tr>
-              <td>Asthma</td>
-              <td>Respiratory condition</td>
-              <td>Inactive</td>
-            </tr>
+                <td>{item.status}</td>
+              </tr>
+            ))}
           </tbody>
         </table>
+
+    </div>
+       
       </div>
     </div>
   );
