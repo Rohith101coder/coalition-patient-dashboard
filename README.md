@@ -1,16 +1,61 @@
-# React + Vite
+# Patient Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a frontend implementation of the Coalition Technologies Patient Dashboard assessment. The goal of this task was to convert the provided Adobe XD design into a responsive single-page healthcare dashboard and populate the UI using the provided Patient Data API.
 
-Currently, two official plugins are available:
+The application was developed using React with Vite and styled using normal CSS.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- Responsive healthcare dashboard UI
+- API integration using Fetch API
+- Dynamic patient data rendering
+- Blood pressure chart using Chart.js
+- Diagnosis history section
+- Diagnostic list table
+- Patient profile details
+- Lab results section
+- Reusable React component structure
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Technologies Used
 
-## Expanding the ESLint configuration
+- React
+- Vite
+- CSS
+- Chart.js
+- React Icons
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```bash
+src
+│
+├── assets
+├── components
+├── services
+├── styles
+├── App.jsx
+└── main.jsx
+
+
+
+API Integration
+
+The application fetches patient data from the Coalition Technologies Patient Data API using Basic Authentication. Only the data for Jessica Taylor is displayed as per the task instructions.
+
+Running the Project
+
+Clone the repository and install dependencies:
+
+npm install
+
+Start the development server:
+
+npm run dev
+
+Build for production:
+
+npm run build
+Notes
+The UI was designed to closely match the provided Adobe XD template.
+Focus was given to layout accuracy, responsiveness, reusable components, and clean frontend structure.
+Only the interactions required in the task were implemented.
