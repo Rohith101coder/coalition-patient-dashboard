@@ -69,6 +69,10 @@ function BloodPressureChart({ diagnosisHistory }) {
        position: "top",
        align: "start",
      },
+
+     tooltip: {
+       enabled: false,
+     },
    },
 
    scales: {

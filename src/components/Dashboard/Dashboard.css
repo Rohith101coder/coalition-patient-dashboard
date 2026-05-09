@@ -1,7 +1,6 @@
 .dashboard{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
+    width:100%;
+    min-width:0;
 }
 
 .diagnosis-card{
@@ -72,12 +71,14 @@
 }
 
 .diagnostic-list{
-    max-height:400px;
-    overflow-y:auto;
+    background:white;
+    border-radius:20px;
+    padding:20px;
 }
 
 .diagnostic-list h2{
     margin-bottom:20px;
+    color:#072635;
 }
 
 table{
@@ -86,6 +87,16 @@ table{
 
 thead{
     background:#f6f7fb;
+}
+
+thead th:first-child{
+    border-top-left-radius:12px;
+    border-bottom-left-radius:12px;
+}
+
+thead th:last-child{
+    border-top-right-radius:12px;
+    border-bottom-right-radius:12px;
 }
 
 th{
@@ -111,4 +122,142 @@ tbody tr:hover{
 
 .table-wrapper{
     overflow-x:auto;
+}
+.vital-icon{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    margin-bottom:15px;
+
+    font-size:28px;
+}
+
+.bp-content{
+    display:grid;
+    grid-template-columns:minmax(0, 1fr) 180px;
+    gap:24px;
+    align-items:start;
+}
+
+.chart-section{
+    min-width:0;
+    width:100%;
+}
+
+.bp-stats{
+    width:180px;
+    flex-shrink:0;
+
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+
+    padding-top:10px;
+}
+
+.bp-stat{
+    display:flex;
+    gap:12px;
+    align-items:flex-start;
+}
+
+.bp-stat h4{
+    font-size:14px;
+    margin-bottom:8px;
+}
+
+.bp-stat h2{
+    font-size:30px;
+    margin-bottom:6px;
+    color:#072635;
+}
+
+.bp-stat p{
+    font-size:14px;
+    color:#555;
+}
+
+.dot{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    margin-top:5px;
+}
+
+.systolic-dot{
+    background:#E66FD2;
+}
+
+.diastolic-dot{
+    background:#8C6FE6;
+}
+
+.bp-stats hr{
+    border:none;
+    border-top:1px solid #ddd;
+}
+
+/* Wrapper */
+.diagnostic-table-wrapper{
+    overflow-x:auto;
+}
+
+/* Scrollbar */
+.diagnostic-table-wrapper::-webkit-scrollbar{
+    width:6px;
+}
+
+.diagnostic-table-wrapper::-webkit-scrollbar-thumb{
+    background:#072635;
+    border-radius:20px;
+}
+
+/* Table */
+.diagnostic-table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0 10px;
+}
+
+/* Header */
+.diagnostic-table thead tr{
+    background:#f6f7fb;
+}
+
+.diagnostic-table th{
+    padding:16px;
+    text-align:left;
+    font-size:14px;
+    color:#072635;
+    font-weight:600;
+}
+
+/* Rounded Header */
+.diagnostic-table th:first-child{
+    border-top-left-radius:20px;
+    border-bottom-left-radius:20px;
+}
+
+.diagnostic-table th:last-child{
+    border-top-right-radius:20px;
+    border-bottom-right-radius:20px;
+}
+
+/* Body */
+.diagnostic-table td{
+    padding:14px 16px;
+    font-size:14px;
+    color:#555;
+    border-bottom:1px solid #f1f1f1;
+}
+
+/* Hover */
+.diagnostic-table tbody tr:hover{
+    background:#fafafa;
 }

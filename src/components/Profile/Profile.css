@@ -65,6 +65,46 @@
     padding:14px;
     border-radius:12px;
     margin-bottom:10px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.detail-content{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+}
+
+.detail-content p{
+    font-size:15px;
+    font-weight:600;
+    color:#1f2937;
+}
+
+.detail-content h4{
+    font-size:13px;
+    color:#8c8c8c;
+    font-weight:500;
+}
+.detail-item{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+}
+
+.detail-icon{
+    min-width:38px;
+    height:38px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+    background:#f6f7fb;
+
+    color:#555;
     font-size:14px;
-    cursor:pointer;
 }

@@ -25,13 +25,13 @@ function Sidebar() {
       name: "Jessica Taylor",
       gender: "Female",
       age: 28,
-      image: "https://i.pravatar.cc/50?img=4",
+      image: "https://i.pravatar.cc/50?img=5",
     },
     {
       name: "Samantha Johnson",
       gender: "Female",
       age: 56,
-      image: "https://i.pravatar.cc/50?img=5",
+      image: "https://i.pravatar.cc/50?img=4",
     },
     {
       name: "Ashley Martinez",

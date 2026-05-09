@@ -1,18 +1,21 @@
 import "./Navbar.css";
+import { FaHeartbeat } from "react-icons/fa";
 import {
   FaHome,
   FaCalendarAlt,
   FaComments,
   FaCreditCard,
   FaCog,
+  FaUsers
 } from "react-icons/fa";
+import logo from "../../assets/images/logo.png";
 
 function Navbar() {
   return (
     <nav className="navbar">
       {/* Logo */}
       <div className="logo">
-        <h2>Tech.Care</h2>
+        <img src={logo} alt="Tech Care Logo" />
       </div>
 
       {/* Menu */}
@@ -23,7 +26,7 @@ function Navbar() {
         </li>
 
         <li className="active">
-          <FaHome />
+          <FaUsers />
           <span>Patients</span>
         </li>
 

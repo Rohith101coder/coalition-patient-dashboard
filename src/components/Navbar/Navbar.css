@@ -12,6 +12,17 @@
     font-size:28px;
 }
 
+.logo{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo-icon{
+    color:#00d1c1;
+    font-size:28px;
+}
+
 .nav-links{
     display:flex;
     align-items:center;
